@@ -205,12 +205,14 @@ a.fill {
     grid-row: auto;
     margin: 2%;
     padding-bottom: 2%;
-    background-color: rgb(235, 235, 235);
     transition: background-color .5s;
+    background-color: rgb(238, 238, 238);
+    /*border: 1px solid #777*/
 }
 
 .hikecard:hover {
     background-color: rgb(171, 217, 238);
+    /*border: 1px solid #777;*/
 }
 
 .hikecardimg {
