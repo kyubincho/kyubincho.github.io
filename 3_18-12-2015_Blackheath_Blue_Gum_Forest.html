@@ -1,30 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="../css/styles.css", rel="stylesheet" type="text/css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Official Ivan Express</title>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+  <script> 
+  $(function(){
+    $("#header").load("header.html"); 
+  });
+  </script> 
+  <div id="header"></div>
 </head>
+
 <body>
   <div class="background">
     <div class="main">
-      <h1>
-        This is a nice website
-      </h1>
-
-      <!-- Navbar (sit on top) -->
-        <header>
-          <div class="navbar">
-            <nav>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="hikes.html">Hikes</a></li>
-                <li><a href="stats.html">Stats</a></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
+      <div id="title"></div>
+      <div id="navbar"></div>
 
       <!-- Blackheath: Blue Gum Forest -->
       <div class="content">
@@ -34,3 +28,4 @@
       </div>
 
 </body>
+<div id="footer"></div>
