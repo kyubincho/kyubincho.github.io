@@ -7,15 +7,20 @@ body {
 
 ul {
     list-style-type: none;
-    margin: 5%;
+    margin: 2%;
+    padding: 0%;
+}
+
+p {
+    margin: 2%;
     padding: 0%;
 }
 
 .background {
     background: #ffffff;
     margin-top: 1%;
-    margin-left: 13%;
-    margin-right: 13%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .main {
@@ -96,11 +101,19 @@ nav a:hover::before {
     object-fit: cover;
 }
 
+.hikeboxborder {
+    margin-bottom: 2%;
+    width:100%;
+    height:100%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
 .hikebox {
-    margin: 2%;
     width:100%;
     height:100%;
     background-color: rgb(238, 238, 238);
+    position: relative;
 }
 
 .hikeboxpic {
@@ -113,18 +126,33 @@ nav a:hover::before {
     display: inline-block;
 }
 
-.hikeboxstats {
+.hikeboxtext {
+    color: black;
     padding-left: 10px;
-    display: flex;
     position: relative;
-    padding: 8px;
+    height: 100%;
+    padding: 1%;
+    vertical-align: mi;
     display: inline-block;
 }
 
-.hikeboxtext {
+.hikeboxstats {
+    color: black;
     padding-left: 10px;
-    display: flex;
-    position: relative;
-    padding: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 7%;
+    height: 86%;
+    padding: 1%;
     display: inline-block;
+    vertical-align: middle;
+    background-color: rgb(207, 207, 207);
+}
+
+a.fill {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
 }
