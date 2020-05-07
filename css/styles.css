@@ -222,9 +222,7 @@ a.fill {
     object-fit: fill;
 }
 
-.hikecardtext {
-
-}
+/*.hikecardtext {} currently not in use */ 
 
 .hikename {
     font-size: large;
