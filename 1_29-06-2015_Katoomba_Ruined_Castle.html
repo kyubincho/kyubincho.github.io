@@ -12,26 +12,75 @@
   });
   </script> 
   <div id="header"></div>
+  <!-- map loading -->
+	<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+	<script src="https://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
+
+  <script type="text/javascript">
+
+		var map; //complex object of type OpenLayers.Map
+
+		function init() {
+			map = new OpenLayers.Map ("map", {
+				controls:[
+					new OpenLayers.Control.Navigation(),
+					new OpenLayers.Control.PanZoomBar(),
+					new OpenLayers.Control.LayerSwitcher(),
+					new OpenLayers.Control.Attribution()],
+				maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34),
+				maxResolution: 156543.0399,
+				numZoomLevels: 19,
+				units: 'm',
+				projection: new OpenLayers.Projection("EPSG:900913"),
+				displayProjection: new OpenLayers.Projection("EPSG:4326")
+			} );
+
+			// Define the map layer
+			// Here we use a predefined layer that will be kept up to date with URL changes
+			layerMapnik = new OpenLayers.Layer.OSM.Mapnik("Mapnik");
+			map.addLayer(layerMapnik);
+			layerCycleMap = new OpenLayers.Layer.OSM.CycleMap("CycleMap");
+			map.addLayer(layerCycleMap);
+			layerMarkers = new OpenLayers.Layer.Markers("Markers");
+			map.addLayer(layerMarkers);
+
+			// Add the Layer with the GPX Track
+			var lgpx = new OpenLayers.Layer.Vector("Lakeside cycle ride", {
+				strategies: [new OpenLayers.Strategy.Fixed()],
+				protocol: new OpenLayers.Protocol.HTTP({
+					url: "around_lake.gpx",
+					format: new OpenLayers.Format.GPX()
+				}),
+				style: {strokeColor: "green", strokeWidth: 5, strokeOpacity: 0.5},
+				projection: new OpenLayers.Projection("EPSG:4326")
+			});
+			map.addLayer(lgpx);
+
+			// Add a Layer with Marker
+			var size = new OpenLayers.Size(21, 25);
+			var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+			var icon = new OpenLayers.Icon('https://www.openstreetmap.org/openlayers/img/marker.png',size,offset);
+			layerMarkers.addMarker(new OpenLayers.Marker(lonLat,icon));
+
+			// Start position for the map (hardcoded here for simplicity,
+			// but maybe you want to get this from the URL params)
+			var lat=47.496792;
+			var lon=7.571726;
+			var zoom=13;
+			var lonLat = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+			map.setCenter(lonLat, zoom);
+		}
+	</script>
+
+
+
 </head>
 
-<!-- For background images
-<style>
-  body {
-    background-image: url("https://i.imgur.com/StHVLQZ.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-</style>
-
--->
-
-
-<body>
+<body onload="init();">
+  <div id="title"></div>
+  <div id="navbar"></div>
   <div class="background">
     <div class="main">
-      <div id="title"></div>
-      <div id="navbar"></div>
 
       <!-- Katoomba: Ruined Castle -->
       <div class="content">
@@ -39,9 +88,62 @@
           Katoomba: Ruined Castle
         </h1>
 
-        <div class="fullalbum"><a href="https://photos.app.goo.gl/ktTdgVy1qEYTeJcE6" class="fill">
+        <!-- Image Slideshow-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="https://i.imgur.com/StHVLQZ.jpg" class="slideshow-img">
+            <div class="text">Caption Text</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="https://i.imgur.com/5usoxwK.jpg" class="slideshow-img">
+            <div class="text">Caption Two</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="https://i.imgur.com/ibX0R7a.jpg" class="slideshow-img">
+            <div class="text">Caption Three</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="https://i.imgur.com/ibX0R7a.jpg" class="slideshow-img">
+            <div class="text">Caption Three</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="https://i.imgur.com/ibX0R7a.jpg" class="slideshow-img">
+            <div class="text">Caption Three</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+          <span class="dot" onclick="currentSlide(5)"></span> 
+        </div>
+
+        <script type="text/javascript" src="slideshow.js"></script>
+        <!-- End Image Slideshow-->
+
+        <!-- full album -->
+        <div class="fullalbum"><a href="https://photos.app.goo.gl/ktTdgVy1qEYTeJcE6" class="fullalbum">
           View Full Album
         </a></div>
+
+        <!-- map here -->
+        <div style="width:90%; height:600px" id="map"></div>
 
       </div>
     </div>
