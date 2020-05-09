@@ -99,11 +99,11 @@ function sortBy(argName) {
 
   if (dir == "desc") {
     document.getElementById("officialHikesSortBy").innerHTML = 
-    "Sort By: " + argName + " ▼";
+    argName + " ▼";
 
   } else if (dir == "asc") {
     document.getElementById("officialHikesSortBy").innerHTML = 
-    "Sort By: " + argName + " ▲";
+    argName + " ▲";
   }
   // check for direction
 }

@@ -483,8 +483,7 @@ img {vertical-align: middle;}
   
 /* Dropdown button */
 .dropdown .dropbtn {
-    text-align: left;
-    min-width: 220px;
+    min-width: 160px;
     font-size: 16px;
     border: none;
     outline: none;
