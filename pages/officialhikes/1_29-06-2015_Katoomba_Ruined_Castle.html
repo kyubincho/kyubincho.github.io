@@ -73,7 +73,7 @@
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
 
-        <div style="text-align:center">
+        <div class="dotcontainer">
           <span class="dot" onclick="currentSlide(1)"></span> 
           <span class="dot" onclick="currentSlide(2)"></span> 
           <span class="dot" onclick="currentSlide(3)"></span> 
@@ -92,13 +92,16 @@
         <!-- map here -->
         <div id="map" class="map"></div>
         <script type="text/javascript">
+          // layers
+          var layers = [
+            new ol.layer.Tile({
+              source: new ol.source.OSM()
+            })
+          ]
+
           var map = new ol.Map({
             target: 'map',
-            layers: [
-              new ol.layer.Tile({
-                source: new ol.source.OSM()
-              })
-            ],
+            layers: layers,
             view: new ol.View({
               center: ol.proj.fromLonLat([150.32301, -33.61973]),
               zoom: 14
