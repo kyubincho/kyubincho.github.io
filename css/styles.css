@@ -8,7 +8,7 @@ body {
 	margin: 0;
 	background: rgb(238, 238, 238);
     font-family: 'Roboto', sans-serif;
-    font-weight: 800;
+    font-weight: normal;
 }
 
 ul {
@@ -256,6 +256,7 @@ a.fill {
     margin: 2%;
     transition: background-color .5s;
     background-color: #eeeeee;
+	position: relative;
     /*border: 1px solid #777*/
 }
 
@@ -280,11 +281,14 @@ a.fill {
 .hikedate {
     font-size: medium;
     color: #787878;
+    padding-bottom: 1%;
 }
 
 .hikedesc {
     font-size: small;
     color: #787878;
+    padding-bottom: 1%;
+    line-height: 120%;
 }
 
 .hikecardstatsgrid {
@@ -294,6 +298,7 @@ a.fill {
     grid-gap: 1%;
     grid-auto-rows: minmax(29px, auto);
     text-align: center;
+    vertical-align: bottom;
 }
 
 .hikecardstats {
