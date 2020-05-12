@@ -39,6 +39,7 @@ p {
     margin-right: 2%;
     margin-bottom: 10%;
     padding-top: 5px;
+    padding-bottom: 2%;
     max-height: 100%; 
     max-width: 100%;  
 }
@@ -522,3 +523,44 @@ img {vertical-align: middle;}
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
+/* START PAGE GRID, STATS, DESCRIPTIONS AN MAP CSS */
+/* grid on pages for slideshow and stats */
+.pagegrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.pageleftgrid {
+
+}
+
+.pagecentergrid {
+    grid-column: auto;
+    grid-row: auto;
+    margin: 2%;
+    transition: background-color .5s;
+	position: relative;
+}
+
+.pagerightgrid {
+
+}
+
+.pagehikestats {
+    font-size: medium;
+    font-weight: bold;
+    line-height: 250%;
+}
+
+.pagenotes {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+}
+
+
+
+
+/* END PAGE GRID, STATS DESCRIPTIONS AND MAP CSS */
