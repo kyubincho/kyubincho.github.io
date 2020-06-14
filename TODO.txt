@@ -13,6 +13,8 @@ Featural Functions
 - Featured/Favourites pics tab on navbar
 - videos tab on navbar
 - EVERY PICTURE NEEDS CAPTIONS (on hover?)
+- Put photos into git folder instead of imgur/google albums?
+- album links open in new tab
 
 Designs, looks and vibes
 - each hike page layout, description, stats map pictures layouts
