@@ -21,3 +21,4 @@ Designs, looks and vibes
 - Hikecards stats, move from bottom to top right over pic maybe?
 - Maybe try DARK MODE
 - logos and each page tab has different title
+- IMGUR PICTURES NOT LOADING! USE BUILT IN PICTURE FILE CALLING SYSTEM

@@ -1,8 +1,9 @@
 function createHTML(jsonArray, number) {
-    data = jsonArray[number - 1];
+    
+    // data = jsonArray[number - 1];
+    data = jsonArray.find(record => record["No."] === number)
 
     const body = document.getElementsByTagName("body")[0];
-
 
     // title div
     let title = document.createElement("div");

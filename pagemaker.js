@@ -1,7 +1,7 @@
 
 // Dynamic page maker
 
-let no_hikes = 35;
+let no_hikes = 2000;
 var hike_i;
 for (hike_i = 1; hike_i < no_hikes; hike_i++) {
 
@@ -27,7 +27,7 @@ for (hike_i = 1; hike_i < no_hikes; hike_i++) {
 <html lang="en">
 <head>
   <script type="text/javascript" src="../../officialhikes.js"></script>
-  <script
+  <script>
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous">
