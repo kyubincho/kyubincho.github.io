@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" src="../hikecard.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+  <script> 
+  $(function(){
+    $("#header").load("header.html"); 
+  });
+  </script> 
+  <div id="header"></div>
+</head>
+
+<body>
+  <div id="title"></div>
+  <div id="navbar"></div>
+  <div class="background">
+    <div class="main">
+
+
+      <!-- Hikes -->
+      <div class="officialhikesheading">
+
+
+        <div class="heading">
+          <h1>
+            Official Ivan Express Hikes
+          </h1>
+        </div>
+        <!-- Sort drop down -->
+        <div class="dropdowngrid">
+          
+          <div class="dropdown">
+            <button class="dropbtn" id="officialHikesSortBy">Date ▼</button>
+            <div class="dropdown-content">
+              <div><button class="sortbutton" onclick="sortBy('Name')">Name</button></div>
+              <div><button class="sortbutton" onclick="sortBy('Date')">Date</button></div>
+              <div><button class="sortbutton" onclick="sortBy('Distance')">Distance</button></div>
+              <div><button class="sortbutton" onclick="sortBy('Ascent')">Ascent</button></div>
+              <div><button class="sortbutton" onclick="sortBy('Participants')">Participants</button></div>
+              <div><button class="sortbutton" onclick="sortBy('Difficulty')">Difficulty</button></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      
+      <!-- Sort Button -->
+      <!-- <button class="sortbutton" onclick="sortByName()">Sort By Name</button>
+      <button class="sortbutton" onclick="sortByDate()">Sort By Date</button>
+      <button class="sortbutton" onclick="sortByDate()">Sort By Distance</button>
+      <button class="sortbutton" onclick="sortByDate()">Sort By Ascent</button>
+      <button class="sortbutton" onclick="sortByDate()">Sort By Participants</button>
+      <button class="sortbutton" onclick="sortByDate()">Sort By Difficulty</button> -->
+
+      <!-- Grid Library of hikes -->
+      <div class="hikegrid" id="officialhikesgrid">
+      
+        <script>
+          $.getJSON("../hikedata.json", function(data) {
+            createHikeCards(data);
+          });
+        </script>
+
+      </div>  
+    </div> 
+  </div>  
+  
+</body>
+<div id="footer"></div>
+
+<!-- sort by newest first -->
+<script type="text/javascript" src="../sort.js"></script>
+<script>
+  sortBy("Date");
+  sortBy("Date");
+</script>
