@@ -70,7 +70,7 @@ function createHikeCards(jsonArray) {
                 hikeThumbnail.setAttribute("class", "hikecardimg");
                     let imgLink = document.createElement("img");
                     imgLink.setAttribute("class", "image");
-                    imgLink.setAttribute("src", "../website images/" + data["No."] + ".jpg");
+                    imgLink.setAttribute("src", "../../website images/" + data["No."] + ".jpg");
                     hikeThumbnail.appendChild(imgLink);
                 hikeLink.appendChild(hikeThumbnail);
 
@@ -105,7 +105,7 @@ function createHikeCards(jsonArray) {
                             let iconDistance = document.createElement("img");
                             iconDistance.setAttribute("class", "hikestatsicons");
                             iconDistance.setAttribute("id", "iconDistance");
-                            iconDistance.setAttribute("src", "../website images/iconDistance.png");
+                            iconDistance.setAttribute("src", "../../website images/iconDistance.png");
                             hikeDistance.appendChild(iconDistance);
 
                             let hikeDistanceP = document.createElement("p");
@@ -123,7 +123,7 @@ function createHikeCards(jsonArray) {
                             let iconAscent = document.createElement("img");
                             iconAscent.setAttribute("class", "hikestatsicons");
                             iconAscent.setAttribute("id", "iconAscent");
-                            iconAscent.setAttribute("src", "../website images/iconAscent.png");
+                            iconAscent.setAttribute("src", "../../website images/iconAscent.png");
                             hikeAscent.appendChild(iconAscent);
 
                             let hikeAscentP = document.createElement("p");
@@ -141,7 +141,7 @@ function createHikeCards(jsonArray) {
                             let iconPeople = document.createElement("img");
                             iconPeople.setAttribute("class", "hikestatsicons");
                             iconPeople.setAttribute("id", "iconPeople");
-                            iconPeople.setAttribute("src", "../website images/iconPeople.png");
+                            iconPeople.setAttribute("src", "../../website images/iconPeople.png");
                             hikePeople.appendChild(iconPeople);
 
                             let hikePeopleP = document.createElement("p");
@@ -159,7 +159,7 @@ function createHikeCards(jsonArray) {
                             let iconDifficulty = document.createElement("img");
                             iconDifficulty.setAttribute("class", "hikestatsicons");
                             iconDifficulty.setAttribute("id", "iconDifficulty");
-                            iconDifficulty.setAttribute("src", "../website images/iconDifficulty.png");
+                            iconDifficulty.setAttribute("src", "../../website images/iconDifficulty.png");
                             hikeDifficulty.appendChild(iconDifficulty);
 
                             let hikeDifficultyP = document.createElement("p");
