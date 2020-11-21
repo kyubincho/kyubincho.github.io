@@ -96,6 +96,8 @@ function createHTML(jsonArray, number) {
                     let view_album_a = document.createElement("a");
                     view_album_a.setAttribute("class", "fullalbum");
                     view_album_a.setAttribute("href", data["Album_Link"]);
+                    view_album_a.setAttribute("rel", "noopener noreferrer");     // Open in new tab
+                    view_album_a.setAttribute("target", "_blank");
                         let view_album_a_text = document.createTextNode("View Full Album");
                         view_album_a.appendChild(view_album_a_text);
                     view_album.appendChild(view_album_a);
