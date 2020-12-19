@@ -108,3 +108,5 @@ function sortBy(argName) {
   }
   // check for direction
 }
+
+// sortBy('Name');

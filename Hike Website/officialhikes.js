@@ -68,7 +68,25 @@ function createHTML(jsonArray, number) {
                 
                     // People (Inside stats div)
                     let people = document.createElement("p");
-                        let people_text = document.createTextNode("People: " + data["PPL"]);
+
+                        // locate the keys for attending members
+                        let flag = 0;
+                        let members = [];
+                        Object.keys(data).forEach(function(key) {
+                            if (key == "Ivan") {
+                                flag = 1;
+                            }
+                            if (flag == 1) {
+                                if (data[key] == "1") {
+                                    members.push(" " + key);
+                                }
+                            }
+                            if (key == "Description") {
+                                flag = 0;
+                            }
+                        })
+
+                        let people_text = document.createTextNode("Participants: " + data["PPL"] + members);
                         people.appendChild(people_text);
                     stats.appendChild(people);
 
