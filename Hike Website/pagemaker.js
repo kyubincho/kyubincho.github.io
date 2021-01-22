@@ -43,5 +43,5 @@ $.getJSON("hikedata.json", function(hikedata) {
   }
   
 });
-
+ 
 

@@ -38,6 +38,17 @@ function createHTML(jsonArray, number) {
                     h2.appendChild(h2_date);
                 content.appendChild(h2);
 
+                // Video Embedded (if available)
+                if (data["Youtube"] != "x") {
+                    let vidDiv = document.createElement("div");
+                        let iframe = document.createElement("iframe");
+                        iframe.setAttribute("width", "420");
+                        iframe.setAttribute("height", "315");
+                        iframe.setAttribute("src", data["Youtube"]);
+                        vidDiv.appendChild(iframe);
+                    content.appendChild(vidDiv);
+                }
+
                 // Div for stats
                 let stats = document.createElement("div");
                 stats.setAttribute("class", "statsgrid");
@@ -65,6 +76,16 @@ function createHTML(jsonArray, number) {
                         let difficulty_text = document.createTextNode("Difficulty: " + data["Difficulty"]);
                         difficulty.appendChild(difficulty_text);
                     stats.appendChild(difficulty);
+
+                    // Logbook (Inside stats div)
+                    let logbook = document.createElement("p");
+                        let logbook_yes_no = "No";
+                        if (data["Log"] == 1) {
+                            logbook_yes_no = "Yes";
+                        } 
+                        let logbook_text = document.createTextNode("Logbook: " + logbook_yes_no);
+                        logbook.appendChild(logbook_text);
+                    stats.appendChild(logbook);
                 
                     // People (Inside stats div)
                     let people = document.createElement("p");
@@ -86,7 +107,7 @@ function createHTML(jsonArray, number) {
                             }
                         })
 
-                        let people_text = document.createTextNode("Participants: " + data["PPL"] + members);
+                        let people_text = document.createTextNode("Participants: " + data["PPL"] + " (" + members + " )");
                         people.appendChild(people_text);
                     stats.appendChild(people);
 
