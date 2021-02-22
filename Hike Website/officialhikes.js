@@ -41,10 +41,15 @@ function createHTML(jsonArray, number) {
                 // Video Embedded (if available)
                 if (data["Youtube"] != "x") {
                     let vidDiv = document.createElement("div");
+                    vidDiv.setAttribute("class", "flex-container")
                         let iframe = document.createElement("iframe");
-                        iframe.setAttribute("width", "420");
-                        iframe.setAttribute("height", "315");
+                        iframe.setAttribute("width", "1120");
+                        iframe.setAttribute("height", "630");
                         iframe.setAttribute("src", data["Youtube"]);
+                        iframe.setAttribute("frameborder", "0");
+                        iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture");
+                        iframe.setAttribute("allowfullscreen", "");
+                        
                         vidDiv.appendChild(iframe);
                     content.appendChild(vidDiv);
                 }
