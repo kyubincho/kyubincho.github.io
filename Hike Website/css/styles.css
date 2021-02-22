@@ -552,8 +552,8 @@ img {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.pageleftgrid {
-}
+/* .pageleftgrid {
+} */
 
 .pagecentergrid {
   grid-column: auto;
@@ -563,8 +563,8 @@ img {
   position: relative;
 }
 
-.pagerightgrid {
-}
+/* .pagerightgrid {
+} */
 
 .pagehikestats {
   font-size: medium;
