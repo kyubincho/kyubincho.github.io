@@ -39,7 +39,7 @@ function createHTML(jsonArray, number) {
                 content.appendChild(h2);
 
                 // Video Embedded (if available)
-                if (data["Youtube"] != "x") {
+                if (data["Youtube"] != "x" && data["Youtube"] != "") {
                     let vidDiv = document.createElement("div");
                     vidDiv.setAttribute("class", "flex-container")
                         let iframe = document.createElement("iframe");
