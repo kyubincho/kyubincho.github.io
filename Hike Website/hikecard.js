@@ -175,4 +175,8 @@ function createHikeCards(jsonArray) {
             hikecard.appendChild(hikeLink);
         officialhikesgrid.appendChild(hikecard);
     }
+
+    sortBy('Name');
+    sortBy('Date');
+    sortBy('Date');
 }
