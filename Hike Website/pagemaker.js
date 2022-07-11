@@ -34,12 +34,8 @@ $.getJSON("hikedata.json", function(hikedata) {
       let title = document.createTextNode(data["Location"]);
 
       hikePage_name = hike_i.concat(date, title, ".html")
-
-      console.log(hikePage_name)
   
       hikePage = document.implementation.createHTMLDocument(hikePage_name);
-  
-      console.log(hikePage)
 
       hikePage.getElementsByTagName("head").innerHTML = headCodeBlock;
       hikePage.getElementsByTagName("body").innerHTML = bodyCodeBlock;
