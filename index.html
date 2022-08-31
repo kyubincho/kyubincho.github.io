@@ -1,97 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous">
-  </script>
-  <script> 
-  $(function(){
-    $("#header").load("base/header.html"); 
-  });
-  </script> 
-  <div id="header"></div>
-</head>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("base/header.html");
+      });
+    </script>
+    <div id="header"></div>
+  </head>
 
-<body>
-  <div id="title"></div>
-  <div id="navbar"></div>
-  <div class="background">
-    <div class="main">
-      
-      <div class="content">
-        <h1>
-          Projects
-        </h1>
-        <!-- Grid Library of hikes -->
-        <div class="hikegrid">
+  <body>
+    <div id="title"></div>
+    <div id="navbar"></div>
+    <div class="background">
+      <div class="main">
+        <div class="content">
+          <h1>Projects</h1>
+          <!-- Grid Library of hikes -->
+          <div class="hikegrid">
+            <!-- Project Card -->
+            <div class="hikecard">
+              <a href="https://official-ivan-express.web.app" class="fill">
+                <!-- "Hike Website/index.html" -->
+                <!-- Project Thumbnail -->
+                <div class="hikecardimg">
+                  <img class="image" src="../website images/26.jpg" />
+                </div>
+                <!--Project Text -->
+                <div class="hikecardtext">
+                  <p class="hikename">Hikes</p>
+                  <p><br /></p>
+                  <p class="hikedesc">
+                    Website dedicated to logging and journalling hikes that my
+                    friends and I embark on.
+                  </p>
+                </div>
+              </a>
+            </div>
 
-          <!-- Project Card -->
-          <div class="hikecard"><a href="Hike Website/index.html" class="fill">
-            <!-- Project Thumbnail -->
-            <div class="hikecardimg">
-              <img class="image"
-                src="../website images/26.jpg"/>
+            <!-- Project Card -->
+            <div class="hikecard">
+              <a href="Hike Website\pages\films.html" class="fill">
+                <!-- Project Thumbnail -->
+                <div class="hikecardimg">
+                  <img class="image" src="../website images/42.jpg" />
+                </div>
+                <!--Project Text -->
+                <div class="hikecardtext">
+                  <p class="hikename">Films</p>
+                  <p><br /></p>
+                  <p class="hikedesc">
+                    Collection of Short Films of some of the most memorable
+                    hikes and journeys I have been on.
+                  </p>
+                </div>
+              </a>
             </div>
-            <!--Project Text -->
-            <div class="hikecardtext">
-              <p class="hikename">Hikes</p>
-              <p><br></p>
-              <p class="hikedesc">Website dedicated to logging and journalling hikes that my friends and I embark on.</p>
-            </div>
-          </a></div>
 
-          <!-- Project Card -->
-          <div class="hikecard"><a href="Hike Website\pages\films.html" class="fill">
-            <!-- Project Thumbnail -->
-            <div class="hikecardimg">
-              <img class="image"
-                src="../website images/42.jpg"/>
+            <!-- Project Card -->
+            <div class="hikecard">
+              <a
+                href="https://osudata.herokuapp.com/osu"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="fill"
+              >
+                <!-- Project Thumbnail -->
+                <div class="hikecardimg">
+                  <img class="image" src="../website images/project_osu.jpg" />
+                </div>
+                <!--Project Text -->
+                <div class="hikecardtext">
+                  <p class="hikename">Osu Data</p>
+                  <p><br /></p>
+                  <p class="hikedesc">
+                    Web scraping and data logging of historical top 50 rankings
+                    in the rhythm game OSU.
+                  </p>
+                </div>
+              </a>
             </div>
-            <!--Project Text -->
-            <div class="hikecardtext">
-              <p class="hikename">Films</p>
-              <p><br></p>
-              <p class="hikedesc">Collection of Short Films of some of the most memorable hikes and journeys I have been on.</p>
-            </div>
-          </a></div>
 
-          <!-- Project Card -->
-          <div class="hikecard"><a href="https://osudata.herokuapp.com/osu" target="_blank" rel="noopener noreferrer" class="fill">
-            <!-- Project Thumbnail -->
-            <div class="hikecardimg">
-              <img class="image"
-                src="../website images/project_osu.jpg"/>
+            <!-- Project Card -->
+            <div class="hikecard">
+              <a
+                href="https://osudata.herokuapp.com/hiatus"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="fill"
+              >
+                <!-- Project Thumbnail -->
+                <div class="hikecardimg">
+                  <img
+                    class="image"
+                    src="../website images/project_hiatus.png"
+                  />
+                </div>
+                <!--Project Text -->
+                <div class="hikecardtext">
+                  <p class="hikename">Hiatus Charts</p>
+                  <p><br /></p>
+                  <p class="hikedesc">
+                    Visualising release patterns of magazine, television and
+                    other entertainment mediums.
+                  </p>
+                </div>
+              </a>
             </div>
-            <!--Project Text -->
-            <div class="hikecardtext">
-              <p class="hikename">Osu Data</p>
-              <p><br></p>
-              <p class="hikedesc">Web scraping and data logging of historical top 50 rankings in the rhythm game OSU.</p>
-            </div>
-          </a></div>
-
-          <!-- Project Card -->
-          <div class="hikecard"><a href="https://osudata.herokuapp.com/hiatus" target="_blank" rel="noopener noreferrer" class="fill">
-            <!-- Project Thumbnail -->
-            <div class="hikecardimg">
-              <img class="image"
-                src="../website images/project_hiatus.png"/>
-            </div>
-            <!--Project Text -->
-            <div class="hikecardtext">
-              <p class="hikename">Hiatus Charts</p>
-              <p><br></p>
-              <p class="hikedesc">Visualising release patterns of magazine, television and other entertainment mediums.</p>
-            </div>
-          </a></div>
-        
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-</body>
-<div id="footer"></div>
-
+  </body>
+  <div id="footer"></div>
+</html>
